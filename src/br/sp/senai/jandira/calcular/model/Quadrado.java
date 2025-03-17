@@ -1,33 +1,33 @@
 package br.sp.senai.jandira.calcular.model;
 
-public class Retangulo {
+public class Quadrado {
 
-	private double base;
-	private double altura;
+	private double lado1;
+	private double lado2;
 
-	public void setBase (double base) {
-		this.base = base;
+	public void setLado1 (double lado1) {
+		this.lado1 = lado1;
 	}
 
-	public double getBase() {
-		return base;
+	public double getLado1() {
+		return lado1;
 	}
 
-	public void setAltura (double altura) {
-		this.altura = altura;
+	public void setLado2 (double lado2) {
+		this.lado2 = lado2;
 	}
 
-	public double getAltura() {
-		return altura;
+	public double getLado2() {
+		return lado2;
 	}
 	
 	public double calcularArea() {
-		double area = base * altura;
+		double area = lado1 * lado2;
 		return area;
 	}
 	
 	public double calcularPerimetro() {
-		double perimetro = 2 * (base + altura);
+		double perimetro = 2 * (lado1 + lado2);
 		return perimetro;
 	}
 	
@@ -35,12 +35,14 @@ public class Retangulo {
 		String unidadeMedida = "cm.";
 		String unidadeArea = "cm².";
 		System.out.println("=================");
-		System.out.println("RETÂNGULO");
+		System.out.println("QUADRADO");
 		System.out.println("-----------------");
-		System.out.printf("BASE: %s %s\n", base, unidadeMedida);
-		System.out.printf("ALTURA: %s %s\n", altura, unidadeMedida);
+		System.out.printf("LADO1: %s %s\n", lado1, unidadeMedida);
+		System.out.printf("LADO2: %s %s\n", lado2, unidadeMedida);
 		System.out.printf("ÁREA: %s %s\n",calcularArea(), unidadeArea);
 		System.out.printf("PERÍMETRO: %s %s\n", calcularPerimetro(), unidadeMedida);
 		
 	}
 }
+
+

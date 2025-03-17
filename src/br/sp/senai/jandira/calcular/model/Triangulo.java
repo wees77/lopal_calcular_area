@@ -1,7 +1,6 @@
 package br.sp.senai.jandira.calcular.model;
 
-public class Retangulo {
-
+public class Triangulo {
 	private double base;
 	private double altura;
 
@@ -22,25 +21,21 @@ public class Retangulo {
 	}
 	
 	public double calcularArea() {
-		double area = base * altura;
+		double area = (base * altura)/2;
 		return area;
 	}
 	
-	public double calcularPerimetro() {
-		double perimetro = 2 * (base + altura);
-		return perimetro;
-	}
 	
 	public void mostrarDados() {
 		String unidadeMedida = "cm.";
 		String unidadeArea = "cm².";
 		System.out.println("=================");
-		System.out.println("RETÂNGULO");
+		System.out.println("TRIÂNGULO");
 		System.out.println("-----------------");
 		System.out.printf("BASE: %s %s\n", base, unidadeMedida);
 		System.out.printf("ALTURA: %s %s\n", altura, unidadeMedida);
 		System.out.printf("ÁREA: %s %s\n",calcularArea(), unidadeArea);
-		System.out.printf("PERÍMETRO: %s %s\n", calcularPerimetro(), unidadeMedida);
 		
 	}
+
 }
