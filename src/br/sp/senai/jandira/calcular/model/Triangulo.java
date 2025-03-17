@@ -2,7 +2,8 @@ package br.sp.senai.jandira.calcular.model;
 
 public class Triangulo {
 	private double base;
-	private double altura;
+	private double ladoA;
+	private double ladoB;
 
 	public void setBase (double base) {
 		this.base = base;
@@ -12,18 +13,27 @@ public class Triangulo {
 		return base;
 	}
 
-	public void setAltura (double altura) {
-		this.altura = altura;
+	public void setLadoA (double ladoA) {
+		this.ladoA = ladoA;
 	}
 
-	public double getAltura() {
-		return altura;
+	public double getLadoA() {
+		return ladoA;
+	}
+	
+	public void setLadoB (double ladoB) {
+		this.ladoB = ladoB;
+	}
+
+	public double getLadoB() {
+		return ladoB;
 	}
 	
 	public double calcularArea() {
-		double area = (base * altura)/2;
+		double area = (base * ladoA )/2;
 		return area;
 	}
+
 	
 	
 	public void mostrarDados() {
@@ -33,7 +43,8 @@ public class Triangulo {
 		System.out.println("TRIÂNGULO");
 		System.out.println("-----------------");
 		System.out.printf("BASE: %s %s\n", base, unidadeMedida);
-		System.out.printf("ALTURA: %s %s\n", altura, unidadeMedida);
+		System.out.printf("LADOA: %s %s\n", ladoA, unidadeMedida);
+		System.out.printf("LADOB: %s %s\n", ladoB, unidadeMedida);
 		System.out.printf("ÁREA: %s %s\n",calcularArea(), unidadeArea);
 		
 	}

@@ -2,32 +2,32 @@ package br.sp.senai.jandira.calcular.model;
 
 public class Quadrado {
 
-	private double lado1;
-	private double lado2;
+	private double ladoA;
+	private double ladoB;
 
-	public void setLado1 (double lado1) {
-		this.lado1 = lado1;
+	public void setLadoA (double ladoA) {
+		this.ladoA = ladoA;
 	}
 
-	public double getLado1() {
-		return lado1;
+	public double getLadoA() {
+		return ladoA;
 	}
 
-	public void setLado2 (double lado2) {
-		this.lado2 = lado2;
+	public void setLadoB (double ladoB) {
+		this.ladoB = ladoB;
 	}
 
-	public double getLado2() {
-		return lado2;
+	public double getLadoB() {
+		return ladoB;
 	}
 	
 	public double calcularArea() {
-		double area = lado1 * lado2;
+		double area = ladoA* ladoB;
 		return area;
 	}
 	
 	public double calcularPerimetro() {
-		double perimetro = 2 * (lado1 + lado2);
+		double perimetro = 2 * (ladoA+ ladoB);
 		return perimetro;
 	}
 	
@@ -37,8 +37,8 @@ public class Quadrado {
 		System.out.println("=================");
 		System.out.println("QUADRADO");
 		System.out.println("-----------------");
-		System.out.printf("LADO1: %s %s\n", lado1, unidadeMedida);
-		System.out.printf("LADO2: %s %s\n", lado2, unidadeMedida);
+		System.out.printf("LADOA: %s %s\n", ladoA, unidadeMedida);
+		System.out.printf("LADOB: %s %s\n", ladoB, unidadeMedida);
 		System.out.printf("ÁREA: %s %s\n",calcularArea(), unidadeArea);
 		System.out.printf("PERÍMETRO: %s %s\n", calcularPerimetro(), unidadeMedida);
 		
